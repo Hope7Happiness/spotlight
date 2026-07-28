@@ -23,7 +23,7 @@ Optional model override:
 export QUICKASK_GEMINI_MODEL='gemini-2.5-flash'
 ```
 
-The default model is `gemini-3-flash-preview`. If your API key cannot access it yet, set `QUICKASK_GEMINI_MODEL='gemini-2.5-flash-lite'`.
+The default model is `gemini-3.5-flash-lite` for low-latency quick answers. If your API key cannot access it yet, set `QUICKASK_GEMINI_MODEL='gemini-2.5-flash-lite'`.
 
 Optional output limit override:
 

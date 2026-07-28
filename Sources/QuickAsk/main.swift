@@ -29,7 +29,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
 
         let gemini = GeminiClient(
             apiKeyProvider: APIKeyProvider(),
-            model: ProcessInfo.processInfo.environment["QUICKASK_GEMINI_MODEL"] ?? "gemini-3-flash-preview"
+            model: ProcessInfo.processInfo.environment["QUICKASK_GEMINI_MODEL"] ?? "gemini-3.5-flash-lite"
         )
         let controller = QuickAskController(gemini: gemini)
         panelController = QuickAskPanelController(controller: controller)
@@ -253,7 +253,7 @@ struct QuickAskView: View {
             }
 
             HStack {
-                Text("Model: \(ProcessInfo.processInfo.environment["QUICKASK_GEMINI_MODEL"] ?? "gemini-3-flash-preview")")
+                Text("Model: \(ProcessInfo.processInfo.environment["QUICKASK_GEMINI_MODEL"] ?? "gemini-3.5-flash-lite")")
                     .foregroundStyle(.secondary)
                 Spacer()
                 Button("Copy") {
